@@ -14,5 +14,5 @@ class TestAddMember():
 
     def test_wework_add_mem(self):
         result = self.main.goto_contact().goto_add_member().addfrom_manual().\
-            fillin_character("hehe", "1234567899510").check_add()
+            fillin_character("heheda", "1235567899510").check_add()
         assert result == "添加成功"

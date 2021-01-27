@@ -1,11 +1,12 @@
 from page.base import BasePage
 from page.contact import ContactPage
+from appium.webdriver.common.mobileby import MobileBy
 
 
 class MainPage(BasePage):
 
     def goto_contact(self):
-        self.driver.find_element_by_xpath('//*[@text="通讯录"]').click()
+        self.find_click((MobileBy.XPATH, '//*[@text="通讯录"]'))
         return ContactPage(self.driver)
 
     def goto_workspace(self):
