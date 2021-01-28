@@ -1,5 +1,4 @@
 from selenium.webdriver.remote.webdriver import WebDriver
-from appium.webdriver.common.mobileby import MobileBy
 
 
 class BasePage():

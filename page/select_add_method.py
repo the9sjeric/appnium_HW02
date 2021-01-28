@@ -1,6 +1,6 @@
 from page.add_member import AddMember
 from page.base import BasePage
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.mobileby import By
 
 class SelectAddMethod(BasePage):
 
@@ -11,9 +11,9 @@ class SelectAddMethod(BasePage):
         pass
 
     def addfrom_manual(self):
-        self.find_click((MobileBy.XPATH,'//*[@text="手动输入添加"]'))
+        self.find_click((By.XPATH,'//*[@text="手动输入添加"]'))
         return AddMember(self.driver)
 
     def check_add(self):
-        ele = self.find_get_text((MobileBy.XPATH,'//*[@class="android.widget.Toast"]'))
+        ele = self.find_get_text((By.XPATH,'//*[@class="android.widget.Toast"]'))
         return ele
